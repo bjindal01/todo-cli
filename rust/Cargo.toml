@@ -1,0 +1,17 @@
+[package]
+name = "todo-cli"
+version = "1.0.0"
+edition = "2024"
+rust-version = "1.85"
+description = "Small command-line to-do app with add, list, complete and delete commands and task priorities."
+publish = false
+
+[[bin]]
+name = "todo"
+path = "src/main.rs"
+
+[dependencies]
+libc = "0.2"
+
+[dev-dependencies]
+tempfile = "3"

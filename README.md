@@ -29,3 +29,8 @@ Tasks are saved to `~/.todo.tsv`. Set `TODO_FILE` to use a different file. If th
 Commands that change tasks take a lock on `<task file>.lock` (for example `~/.todo.tsv.lock`), so commands run at the same time wait for each other and no change is lost. The lock file is left in place; it is safe to delete when no `todo` command is running.
 
 Exit codes: `0` success, `1` error (unknown task id, unreadable or damaged file, no task ids left), `2` usage error.
+
+## Rust version
+
+A Rust port with the same commands, output, exit codes and task file format lives in
+[`rust/`](rust/README.md). Build it with `cargo build --release` in that folder.
